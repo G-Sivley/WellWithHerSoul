@@ -15,26 +15,26 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            
-            List(networkManager.posts, rowContent: { (post) in
-                NavigationLink(
-                    destination: DetailView(url: post.link),
-                    label: {
-                        HStack {
-                            Text("Votes: \(post.link)")
-                                .font(.system(size: 15))
-                            //Text(post.title)
-                        }
-                        
-                    })
-                
-                
+            ZStack {
+                Color(red: 0.0, green: 1.0, blue: 0.0)
+                List(networkManager.posts, rowContent: { (post) in
+                    NavigationLink(
+                        destination: DetailView(url: post.link),
+                        label: {
+                            HStack {
+                                Text(post.title.rendered)
+                            }
+                            
+                        })
+                    
+                    
+                })
+                .navigationBarTitle("Well With Her SOUL")
+            }
+            .onAppear(perform: {
+                self.networkManager.fetchData()
             })
-            .navigationBarTitle("Hacker News")
         }
-        .onAppear(perform: {
-            self.networkManager.fetchData()
-        })
     }
 }
 

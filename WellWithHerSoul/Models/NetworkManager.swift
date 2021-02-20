@@ -22,8 +22,6 @@ class NetworkManger: ObservableObject {
                             let results = try decoder.decode([WelcomeElement].self, from: safeData)
                             DispatchQueue.main.async {
                                 self.posts.append(contentsOf: results)
-                                // check to see if it works
-                                print(self.posts)
                             }
                         } catch {
                             print(error)
@@ -33,7 +31,6 @@ class NetworkManger: ObservableObject {
                 }
             }
             task.resume()
-            
         }
     }
 }
