@@ -7,10 +7,19 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
+    @ObservedObject var networkManager = NetworkManger()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Placeholder")
+            .onAppear(perform: {
+                self.networkManager.fetchData()
+            })
+            
+        
     }
 }
 

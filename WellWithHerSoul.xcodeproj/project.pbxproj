@@ -13,6 +13,10 @@
 		90431EF325E0DC87003EDBFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90431EF225E0DC87003EDBFA /* Assets.xcassets */; };
 		90431EF625E0DC87003EDBFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90431EF525E0DC87003EDBFA /* Preview Assets.xcassets */; };
 		90431EF925E0DC87003EDBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90431EF725E0DC87003EDBFA /* LaunchScreen.storyboard */; };
+		90431F0325E0DD9E003EDBFA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90431F0225E0DD9E003EDBFA /* DetailView.swift */; };
+		90431F0B25E0DE16003EDBFA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90431F0A25E0DE16003EDBFA /* WebView.swift */; };
+		90431F0F25E0E2B5003EDBFA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90431F0E25E0E2B5003EDBFA /* NetworkManager.swift */; };
+		90431F1325E0E30B003EDBFA /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90431F1225E0E30B003EDBFA /* PostData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		90431EF525E0DC87003EDBFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90431EF825E0DC87003EDBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90431EFA25E0DC87003EDBFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90431F0225E0DD9E003EDBFA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		90431F0A25E0DE16003EDBFA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		90431F0E25E0E2B5003EDBFA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		90431F1225E0E30B003EDBFA /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,8 @@
 			children = (
 				90431EEC25E0DC7D003EDBFA /* AppDelegate.swift */,
 				90431EEE25E0DC7D003EDBFA /* SceneDelegate.swift */,
-				90431EF025E0DC7D003EDBFA /* ContentView.swift */,
+				90431F0D25E0E29B003EDBFA /* Models */,
+				90431F0125E0DD75003EDBFA /* Views */,
 				90431EF225E0DC87003EDBFA /* Assets.xcassets */,
 				90431EF725E0DC87003EDBFA /* LaunchScreen.storyboard */,
 				90431EFA25E0DC87003EDBFA /* Info.plist */,
@@ -73,6 +82,25 @@
 				90431EF525E0DC87003EDBFA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		90431F0125E0DD75003EDBFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90431EF025E0DC7D003EDBFA /* ContentView.swift */,
+				90431F0225E0DD9E003EDBFA /* DetailView.swift */,
+				90431F0A25E0DE16003EDBFA /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		90431F0D25E0E29B003EDBFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90431F0E25E0E2B5003EDBFA /* NetworkManager.swift */,
+				90431F1225E0E30B003EDBFA /* PostData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90431F0F25E0E2B5003EDBFA /* NetworkManager.swift in Sources */,
 				90431EED25E0DC7D003EDBFA /* AppDelegate.swift in Sources */,
+				90431F0B25E0DE16003EDBFA /* WebView.swift in Sources */,
+				90431F0325E0DD9E003EDBFA /* DetailView.swift in Sources */,
 				90431EEF25E0DC7D003EDBFA /* SceneDelegate.swift in Sources */,
+				90431F1325E0E30B003EDBFA /* PostData.swift in Sources */,
 				90431EF125E0DC7D003EDBFA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
