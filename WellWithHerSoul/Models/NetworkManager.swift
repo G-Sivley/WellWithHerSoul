@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkManger: ObservableObject {
     
-    @Published var posts = [Post]()
+    @Published var posts = [WelcomeElement]()
     
     func fetchData() {
         if let url = URL(string: "https://wellwithhersole.com/wp-json/wp/v2/posts") {
@@ -19,9 +19,9 @@ class NetworkManger: ObservableObject {
                     let decoder = JSONDecoder()
                     if let safeData = data {
                         do {
-                            let results = try decoder.decode(Results.self, from: safeData)
+                            let results = try decoder.decode([WelcomeElement].self, from: safeData)
                             DispatchQueue.main.async {
-                                self.posts = results.hits
+                                self.posts.append(contentsOf: results)
                                 // check to see if it works
                                 print(self.posts)
                             }
@@ -37,4 +37,3 @@ class NetworkManger: ObservableObject {
         }
     }
 }
-

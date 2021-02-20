@@ -14,14 +14,30 @@ struct ContentView: View {
     @ObservedObject var networkManager = NetworkManger()
     
     var body: some View {
-        Text("Placeholder")
-            .onAppear(perform: {
-                self.networkManager.fetchData()
-            })
+        NavigationView {
             
-        
+            List(networkManager.posts, rowContent: { (post) in
+                NavigationLink(
+                    destination: DetailView(url: post.link),
+                    label: {
+                        HStack {
+                            Text("Votes: \(post.link)")
+                                .font(.system(size: 15))
+                            //Text(post.title)
+                        }
+                        
+                    })
+                
+                
+            })
+            .navigationBarTitle("Hacker News")
+        }
+        .onAppear(perform: {
+            self.networkManager.fetchData()
+        })
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

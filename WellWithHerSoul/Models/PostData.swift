@@ -8,17 +8,16 @@
 import Foundation
 
 
-struct Results: Decodable {
+import Foundation
 
-    let hits: [Post]
-}
 
-struct Post: Decodable, Identifiable {
-    var objectID: Int {
-        return id
-    }
+struct WelcomeElement: Codable, Identifiable {
     let id: Int
-    // fix slug later
-    let slug: String
     let link: String
+    let title: GUID
 }
+
+struct GUID: Codable {
+    let rendered: String
+}
+
